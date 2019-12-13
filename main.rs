@@ -24,21 +24,30 @@ fn main()
 
     fn find_leapyear(g: u64) -> bool
     {
-       let  div = g%4;
-       let  div1 = g%400;
-       let mut val_leapyear = false;
-        if div == 0 && div1 == 0
-             {
-            println!("it is a leap year");
-            val_leapyear = true;
-        }
-        else 
+        let mut boolval = false;
+            if g%100 == 0
+      {
+            if g%400 == 0
         {
-            println!("it is not a leap year");
-            
+            println! ("it is a leap year");
+            boolval = true;
         }
-        return val_leapyear;
+
+      }
+
+             else if   g%4 == 0
+      {
+        println!("it is a leap year");
+        boolval = true;
+      }
+
+            else 
+      {
+        println!("it is not a leap year");
+      }
+      return boolval;
     }
+    
 
 
 
